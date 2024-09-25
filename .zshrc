@@ -47,6 +47,13 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # My aliases
 # alias sway="sway --unsupported-gpu"
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+alias cat='bat'
 alias mirupd="sudo reflector --save /etc/pacman.d/mirrorlist -c US -p https -l 10"
 alias ssh="kitty +kitten ssh"
 alias sudo='sudo '
