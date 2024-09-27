@@ -1,13 +1,12 @@
+# antidote plugin manager
+source '/usr/share/zsh-antidote/antidote.zsh'
+antidote load
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mantaboo/.zshrc'
 
-autoload -Uz compinit promptinit
-compinit
-promptinit
-# Set prompt type
-prompt suse
-# End of lines added by compinstall
+autoload -Uz promptinit && promptinit && prompt pure
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -17,8 +16,6 @@ setopt HIST_IGNORE_ALL_DUPS
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # bun completions
