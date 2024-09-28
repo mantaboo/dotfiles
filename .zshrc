@@ -50,7 +50,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # set -o vi
 
 # My aliases
-# alias sway="sway --unsupported-gpu"
+alias sway="sway --unsupported-gpu"
 alias bathelp='bat --plain --language=help'
 help() {
     "$@" --help 2>&1 | bathelp
